@@ -2,7 +2,9 @@
 Code used in Liu et al. (2025)
 --------------------------------------------
 This script modified from Chandel et al. (2024), to automatically track mosquito and calculate preference.
+
 From https://github.com/Craig-Montell-Lab/Chandel_DeBeaubien_2023
+
 Chandel, A., Debeaubien, N. A., Ganguly, A., Meyerhof, G. T., Krumholz, A. A., Liu, J., et al. （2024）. Thermal infrared directs host-seeking behaviour in Aedes aegypti mosquitoes. Nature, 633, 615-623.
 --------------------------------------------
 Usage Steps:
