@@ -31,11 +31,17 @@ Alternatively, you can change the first line from 'true' to 'false' to not save 
 
 使用步骤：
 1、打开IR_launch.m脚本
+
 将YourPath = 'YourPath'单引号内容替换为你的脚本所在目录（IR_launch.m的2行）
+
 2、将.mov或.mp4的视频文件放在名为v的文件夹中
+
 可通过修改代码 fileList = dir('*.mp4')'，识别不同的视频类型(IR_launch.m的25行）
+
 3、运行IR_launch.m脚本，弹出窗口让你选择目录，直接点选择即可
+
 代码继续自动运行，弹出窗口让你选择两个区域(zone)的坐标，
+
 默认配置是捕获两个区域（左和右），从左上角开始以顺时针方式选择左区域顶点，然后以相同的方式选择右区域。
 4、生成背景模型（ModeBackgroundModel2.m)
 代码继续运行，弹出窗口显示当前的背景模型，命令行窗口会弹出'Do you want to modify the background model? (y/n):'以提示你是否需要修改背景模型
