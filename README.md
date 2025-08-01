@@ -6,6 +6,7 @@ This script modified from Chandel et al. (2024), to automatically track mosquito
 From https://github.com/Craig-Montell-Lab/Chandel_DeBeaubien_2023
 
 Chandel, A., Debeaubien, N. A., Ganguly, A., Meyerhof, G. T., Krumholz, A. A., Liu, J., et al. （2024）. Thermal infrared directs host-seeking behaviour in Aedes aegypti mosquitoes. Nature, 633, 615-623.
+
 --------------------------------------------
 Usage Steps:
 1. Open the IR_launch.m script.
@@ -33,11 +34,11 @@ Conversely, if 'y' is entered, the background model will be modified.
 Background model modification steps:
 
 - Hold down the left mouse button and drag to select the area to be modified.
-- 
+
 - When the mouse cursor is in the selected area of the box, it will become a cross. Double-click the left mouse button.
-- 
+
 - In the MATLAB command line window, enter the time point (in seconds) to replace the video, and press Enter.
-- 
+
 - MATLAB will display the modified background image. If you need to continue modifying, input 'y' and repeat the first three steps; otherwise, input 'n' to exit the background modification.
 
 5. Run display_data_save_video.m, which can visualize mosquito tracking and save the video.
@@ -90,20 +91,36 @@ Alternatively, you can change the first line from 'true' to 'false' to not save 
 6. 视频分析所得的结果被保存在工作的'masterData'结构体及视频目录下的'.mat'文件
 --------------------------------------------
 Correlation parameter:
+
 erode = 2 % The parameters of the white-and-black model are used for erosion operations in image processing to reduce the size of detected objects.
+
 sens = 0.48 % A sensitivity parameter of the white-and-black model is used for image segmentation to control the threshold of binarization. 
+
 MinimumBlobArea % Minimum Blob Area     
+
 MaximumBlobArea % Maximum Blob Area
+
 start_time_min = 0 % min, start time of the video
+
 end_time_min = 1 % min, end time of the video
+
 Thresh = meanIntensity * coeff % line 25 of extractForeground2.m, thresholds for video frames and background models
+
 speedThresh % line 25 of assignDetection2.m, used to distinguish between moving objects and stationary objects in object tracking.
+
 frame_id % line 2 of ModeBackgroundModel2.m, used to select video frame from a specified range or entire video
+
 --------------------------------------------
+
 You can uncomment lines 77-88 of IR_trax.m to visualize the effect of blob extraction.
+
 If you want to save the video of blob extraction, you can uncomment lines 51, 52, 87, and 103 of IR_trax.m. 
+
 However, it is worth noting that the visualized video displays the original video frames and the frames with identified blobs, which differs from the data in data. 
+
 This is because data saves the information that meets the criteria of being greater than MinimumBlobArea and less than MaximumBlobArea.
+
 --------------------------------------------
 An example video can be found in our manuscript (Video S1).
+
 Elimination of ultraviolet light-mediated attraction behavior in Culex quinquefasciatus via dsRNA-mediated knockdown of Opsins
