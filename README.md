@@ -11,11 +11,11 @@ Chandel, A., Debeaubien, N. A., Ganguly, A., Meyerhof, G. T., Krumholz, A. A., L
 Usage Steps:
 1. Open the IR_launch.m script.
 
-Replace the content within single quotes in YourPath = 'YourPath' with the directory where your script is located (line 2 of IR_lanch.m).
+   Replace the content within single quotes in YourPath = 'YourPath' with the directory where your script is located (line 2 of IR_lanch.m).
 
 2. Place the '.mov' or '.mp4' video files in a folder named v.
 
-You can modify the code fileList = dir('*.mp4') to recognize different video types (line 25 of IR_lanuch.m).
+   You can modify the code fileList = dir('*.mp4') to recognize different video types (line 25 of IR_lanuch.m).
 
 3. Run the IR_launch.m script, and a window will pop up for you to select the directory, and just click to 'select folder'.
    
