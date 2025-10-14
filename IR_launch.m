@@ -1,5 +1,5 @@
 tic 
-YourPath = 'D:\User\paper\mosquito\UV\code\Code' %% Your path
+YourPath = 'YourPath' %% Your path
 addpath(YourPath)
 
 %% get directory of interest (add directory to video files here)
